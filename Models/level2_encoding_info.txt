@@ -1,0 +1,53 @@
+LEVEL 2 MODEL ENCODING INFORMATION
+==================================================
+
+Trained: 2026-02-23T12:55:55.502397
+Version: 3.0
+
+FEATURE NAMES (in order):
+   1. Age
+   2. RestingBP
+   3. Cholesterol
+   4. FastingBS
+   5. MaxHR
+   6. Oldpeak
+   7. Sex_M
+   8. ChestPainType_ATA
+   9. ChestPainType_NAP
+  10. ChestPainType_TA
+  11. RestingECG_Normal
+  12. RestingECG_ST
+  13. ExerciseAngina_Y
+  14. ST_Slope_Flat
+  15. ST_Slope_Up
+  16. max_hr_predicted
+  17. hr_reserve
+  18. hr_achieved_pct
+  19. cholesterol_risk
+  20. bp_age_risk
+
+ONE-HOT ENCODING MAPPINGS:
+
+Sex:
+  'Male' → {'Sex_M': 1}
+  'Female' → {'Sex_M': 0}
+
+ChestPainType:
+  'Typical Angina' → {'ChestPainType_ATA': 0, 'ChestPainType_NAP': 0, 'ChestPainType_TA': 1}
+  'Atypical Angina' → {'ChestPainType_ATA': 1, 'ChestPainType_NAP': 0, 'ChestPainType_TA': 0}
+  'Non-Anginal' → {'ChestPainType_ATA': 0, 'ChestPainType_NAP': 1, 'ChestPainType_TA': 0}
+  'Asymptomatic' → {'ChestPainType_ATA': 0, 'ChestPainType_NAP': 0, 'ChestPainType_TA': 0}
+
+RestingECG:
+  'Normal' → {'RestingECG_Normal': 1, 'RestingECG_ST': 0}
+  'ST-T Abnormality' → {'RestingECG_Normal': 0, 'RestingECG_ST': 1}
+  'LV Hypertrophy' → {'RestingECG_Normal': 0, 'RestingECG_ST': 0}
+
+ExerciseAngina:
+  'Yes' → {'ExerciseAngina_Y': 1}
+  'No' → {'ExerciseAngina_Y': 0}
+
+ST_Slope:
+  'Upsloping' → {'ST_Slope_Flat': 0, 'ST_Slope_Up': 1}
+  'Flat' → {'ST_Slope_Flat': 1, 'ST_Slope_Up': 0}
+  'Downsloping' → {'ST_Slope_Flat': 0, 'ST_Slope_Up': 0}
