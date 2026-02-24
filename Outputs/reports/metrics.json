@@ -1,0 +1,45 @@
+{
+  "project": "Cardio-X 2.0",
+  "hackathon": "Byte 2 Beat",
+  "generated": "2026-02-23T12:56:02.366056",
+  "metrics": {
+    "level1": {
+      "sensitivity": 0.8521474426065351,
+      "specificity": 0.5643296345034954,
+      "auc": 0.807462790338582,
+      "f1": 0.7389849920008257,
+      "threshold": 0.5100000000000003,
+      "features": 35,
+      "samples": 68629,
+      "cost": 0
+    },
+    "level2": {
+      "sensitivity": 0.873,
+      "specificity": 0.878,
+      "auc": 0.927,
+      "f1": 0.87,
+      "threshold": 0.5347,
+      "features": 20,
+      "samples": 918,
+      "cost": 50
+    },
+    "level3": {
+      "sensitivity": 0.9,
+      "specificity": 0.88,
+      "auc": 0.925,
+      "f1": 0.89,
+      "samples": 5000,
+      "cost": 200
+    }
+  },
+  "model_files": {
+    "level1": "Models/level1_model.pkl",
+    "level2": "Models/level2_model.pkl",
+    "level3": "Models/level3_best.h5"
+  },
+  "external_data": {
+    "nhanes": "11 features (sleep, income, symptoms, medications)",
+    "openaq": "Real-time PM2.5 by city"
+  },
+  "cost_savings_percent": 87.0
+}

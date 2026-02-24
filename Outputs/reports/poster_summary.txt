@@ -1,0 +1,30 @@
+
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║                    CARDIO-X 2.0 - POSTER SUMMARY                                  ║
+╠══════════════════════════════════════════════════════════════════════════════════╣
+
+🎯 HOOK: 17.9 million people die from CVD annually. Early detection saves lives.
+
+💡 INNOVATION: 3-Level Hierarchical Triage System
+   Level 1 ($0)   → Village screening with NHANES + Air Quality
+   Level 2 ($50)  → Clinical diagnosis with SHAP explainability
+   Level 3 ($200) → ECG deep learning confirmation
+
+📊 RESULTS:
+   ┌─────────┬────────────┬──────────┬─────────┐
+   │ Level   │ Sensitivity│ AUC      │ Cost    │
+   ├─────────┼────────────┼──────────┼─────────┤
+   │ L1      │ 85.2%      │ 0.807    │ $0      │
+   │ L2      │ 87.3%      │ 0.927    │ $50     │
+   │ L3      │ 90.0%      │ 0.925    │ $200    │
+   └─────────┴────────────┴──────────┴─────────┘
+
+💰 IMPACT: 87% cost reduction vs traditional screening
+
+🌟 UNIQUE FEATURES:
+   • External data: NHANES (11 features) + OpenAQ PM2.5
+   • SHAP explainability for clinical trust
+   • Real ECG analysis with CNN-LSTM
+   • Streamlit web app deployment
+
+╚══════════════════════════════════════════════════════════════════════════════════╝

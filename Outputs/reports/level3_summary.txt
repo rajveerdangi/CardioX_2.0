@@ -1,0 +1,24 @@
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                    LEVEL 3: ECG DEEP LEARNING                          ║
+║                    CNN-LSTM on PTB-XL Data                             ║
+╠═══════════════════════════════════════════════════════════════════════╣
+║  MODEL ARCHITECTURE:                                                   ║
+║    • 4 Conv1D blocks + 2 Bidirectional LSTM + Dense                   ║
+║    • Total parameters: ~350,305                               ║
+╠═══════════════════════════════════════════════════════════════════════╣
+║  PERFORMANCE (Threshold=0.5788):                                  ║
+║    • Sensitivity: 0.8000                                               ║
+║    • Specificity: 0.8907                                               ║
+║    • AUC-ROC:     0.9138                                               ║
+║    • Accuracy:    0.8453                                               ║
+╠═══════════════════════════════════════════════════════════════════════╣
+║  CONFUSION MATRIX:                                                     ║
+║    • True Positives:  300 | False Positives:  41                          ║
+║    • False Negatives:  75 | True Negatives:  334                          ║
+╠═══════════════════════════════════════════════════════════════════════╣
+║  DATA:                                                                 ║
+║    • Source: PTB-XL (Real Clinical ECG)                               ║
+║    • 12-lead ECG at 500Hz                                             ║
+║    • Clinical labels (NOT synthetic!)                                 ║
+╚═══════════════════════════════════════════════════════════════════════╝

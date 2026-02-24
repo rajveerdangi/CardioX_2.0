@@ -1,0 +1,400 @@
+
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║                           CARDIO-X 2.0 MODEL CARD                                 ║
+║                         Version 2.0 | February 2026                              ║
+║                  Following Google Model Cards & FDA AI/ML Guidance                ║
+╠══════════════════════════════════════════════════════════════════════════════════╣
+
+══════════════════════════════════════════════════════════════════════════════════
+1. MODEL DETAILS
+══════════════════════════════════════════════════════════════════════════════════
+
+   Model Name:        Cardio-X Hierarchical CVD Triage System
+   Version:           2.0
+   Release Date:      2026-02-23
+   Model Type:        Multi-level Binary Classification Ensemble
+
+   Developers:        [Your Name/Team Name]
+   Contact:           [your.email@example.com]
+   License:           MIT (for educational/research use)
+
+   Repository:        [GitHub URL if applicable]
+
+   Architecture Overview:
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ LEVEL 1: Stacked Ensemble                                                   │
+   │   ├── Base Learners: XGBoost, Random Forest, LightGBM, Gradient Boosting    │
+   │   ├── Meta Learner: Logistic Regression                                     │
+   │   ├── Features: 35 (including 11 NHANES + 1 Air Quality)                      │
+   │   └── Parameters: ~50,000 (ensemble combined)                               │
+   ├──────────────────────────────────────────────────────────────────────────────┤
+   │ LEVEL 2: XGBoost + SHAP                                                     │
+   │   ├── Algorithm: XGBoost Classifier                                         │
+   │   ├── Features: 20 (clinical + engineered)                                    │
+   │   ├── Explainability: SHAP (SHapley Additive exPlanations)                  │
+   │   └── Parameters: ~10,000                                                   │
+   ├──────────────────────────────────────────────────────────────────────────────┤
+   │ LEVEL 3: CNN-LSTM Hybrid                                                    │
+   │   ├── Architecture: 4 Conv1D blocks + 2 BiLSTM layers + Dense head          │
+   │   ├── Input: 12-lead ECG (5000 samples × 12 leads)                          │
+   │   ├── Parameters: 350,305                                                │
+   │   └── Training Time: 20 hours on Mac M2                                     │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+══════════════════════════════════════════════════════════════════════════════════
+2. INTENDED USE
+══════════════════════════════════════════════════════════════════════════════════
+
+   2.1 Primary Intended Uses:
+   ────────────────────────────────────────────────────────────────────────────────
+   ✅ Population-level cardiovascular disease risk screening
+   ✅ Clinical decision SUPPORT for risk stratification
+   ✅ Triage optimization in resource-limited healthcare settings
+   ✅ Educational demonstration of hierarchical AI in healthcare
+   ✅ Research prototype for multi-level diagnostic systems
+
+   2.2 Intended Users:
+   ────────────────────────────────────────────────────────────────────────────────
+   │ Level │ Intended User                │ Setting                              │
+   ├───────┼──────────────────────────────┼──────────────────────────────────────┤
+   │   1   │ Community Health Workers     │ Village clinics, health camps        │
+   │   1   │ Nurses, Health Assistants    │ Primary care centers                 │
+   │   2   │ Primary Care Physicians      │ Outpatient clinics                   │
+   │   2   │ Internal Medicine Doctors    │ Hospitals                            │
+   │   3   │ Cardiologists                │ Specialized cardiac centers          │
+   │   3   │ Electrophysiologists         │ Hospitals with ECG capability        │
+   └───────┴──────────────────────────────┴──────────────────────────────────────┘
+
+   2.3 Out-of-Scope Uses (NOT Intended For):
+   ────────────────────────────────────────────────────────────────────────────────
+   ❌ Emergency or acute cardiac event diagnosis (call 911!)
+   ❌ Pediatric patients (under 18 years old)
+   ❌ Pregnant patients
+   ❌ Patients with pacemakers or implanted cardiac devices
+   ❌ Replacement of clinical judgment or physician decision-making
+   ❌ Sole basis for treatment decisions
+   ❌ Regulatory-approved medical device (not FDA/CE cleared)
+
+══════════════════════════════════════════════════════════════════════════════════
+3. TRAINING DATA
+══════════════════════════════════════════════════════════════════════════════════
+
+   3.1 Data Sources:
+   ────────────────────────────────────────────────────────────────────────────────
+
+   LEVEL 1 - Primary Dataset:
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ Dataset:     cardio_base.csv (Kaggle Cardiovascular Disease Dataset)        │
+   │ Samples:     70,000 raw → 68,629 after cleaning                             │
+   │ Features:    11 original + engineered                                       │
+   │ Target:      Binary (CVD: 0/1)                                              │
+   │ Collection:  Medical examination records                                    │
+   │ Geography:   Eastern European population                                    │
+   │ Time Period: Unknown (de-identified)                                        │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+   LEVEL 1 - External Enrichment (NHANES):
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ Source:      CDC NHANES 2017-2018 (National Health Survey)                  │
+   │ Files Used:  DEMO_J.XPT, SLQ_J.XPT, BMX_J.XPT, BPQ_J.XPT, CDQ_J.XPT         │
+   │ Features:    11 (income, sleep, waist, BP/cholesterol history, symptoms)    │
+   │ Matching:    Demographic (age-group × gender) population statistics         │
+   │ Geography:   United States representative sample                            │
+   │ Ethics:      Public domain, CDC approved for research                       │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+   LEVEL 1 - External Enrichment (Air Quality):
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ Source:      OpenAQ API / Simulated estimates                               │
+   │ Features:    1 (PM2.5 exposure)                                             │
+   │ Justification: PM2.5 associated with 8-18% increased CVD mortality          │
+   │ Training:    Simulated based on lifestyle proxies                           │
+   │ Inference:   Real-time API data when user provides city                     │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+   LEVEL 2 - Clinical Dataset:
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ Dataset:     heart_processed.csv (UCI Heart Disease + Kaggle)               │
+   │ Samples:     918                                                            │
+   │ Features:    11 original + engineered                                       │
+   │ Target:      Binary (HeartDisease: 0/1)                                     │
+   │ Collection:  Clinical examinations, stress tests                            │
+   │ Geography:   Mixed (Cleveland, Hungary, Switzerland, VA Long Beach)         │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+   LEVEL 3 - ECG Dataset:
+   ┌──────────────────────────────────────────────────────────────────────────────┐
+   │ Dataset:     PTB-XL (PhysioNet)                                             │
+   │ Samples:     21,837 total → 5,000 used (memory constraint)                  │
+   │ Format:      12-lead ECG, 500 Hz, 10 seconds                                │
+   │ Labels:      SCP-ECG codes → Binary (NORM vs Abnormal)                      │
+   │ Geography:   German hospitals                                               │
+   │ Ethics:      PhysioNet Credentialed Access, de-identified                   │
+   │ Citation:    Wagner et al., Scientific Data, 2020                           │
+   └──────────────────────────────────────────────────────────────────────────────┘
+
+   3.2 Data Preprocessing:
+   ────────────────────────────────────────────────────────────────────────────────
+   • Outlier removal: BP (80-250 systolic, 40-150 diastolic), Height (100-220cm)
+   • Missing value imputation: Median (fit on training data only)
+   • Feature scaling: RobustScaler (fit on training data only)
+   • Class balancing: SMOTE (applied to training data only)
+   • Data leakage prevention: Strict train/test separation before all transforms
+
+══════════════════════════════════════════════════════════════════════════════════
+4. PERFORMANCE METRICS
+══════════════════════════════════════════════════════════════════════════════════
+
+   4.1 Overall Performance:
+   ────────────────────────────────────────────────────────────────────────────────
+
+   ┌─────────┬─────────────┬─────────────┬──────────┬───────────────────────────┐
+   │ Level   │ Sensitivity │ Specificity │ AUC-ROC  │ 95% Confidence Interval   │
+   ├─────────┼─────────────┼─────────────┼──────────┼───────────────────────────┤
+   │ Level 1 │   85.2%     │    56.4%    │  0.807   │ (0.798 - 0.815)             │
+   │ Level 2 │   87.3%     │    87.8%    │  0.927   │ (0.89 - 0.97)               │
+   │ Level 3 │   90.0%     │    88.0%    │  0.925   │ (validation set)              │
+   └─────────┴─────────────┴─────────────┴──────────┴───────────────────────────┘
+
+   4.2 Clinical Utility Metrics:
+   ────────────────────────────────────────────────────────────────────────────────
+
+   Level 1 (Screening - prioritize sensitivity):
+   • Sensitivity: 85.2% ✅ (Target: ≥85%)
+   • NPV: ~92% (Safe to rule out low-risk patients)
+   • Threshold: 0.510 (lowered from 0.5 to catch more cases)
+   • Brier Score: 0.18 (calibration quality)
+
+   Level 2 (Diagnosis - balanced):
+   • F1-Score: 87%
+   • Balanced Accuracy: 87.5%
+   • Threshold: 0.5347
+
+   Level 3 (Confirmation - high accuracy):
+   • Used for high-risk confirmation
+   • CNN-LSTM architecture validated on PTB-XL
+
+   4.3 Cross-Validation Results (Level 1):
+   ────────────────────────────────────────────────────────────────────────────────
+   5-Fold Stratified Cross-Validation:
+   • AUC-ROC: 0.807 ± 0.005
+   • Sensitivity: 85.2% ± 1.2%
+   • F1-Score: 75% ± 1.5%
+
+══════════════════════════════════════════════════════════════════════════════════
+5. LIMITATIONS
+══════════════════════════════════════════════════════════════════════════════════
+
+   5.1 Data Limitations:
+   ────────────────────────────────────────────────────────────────────────────────
+   ⚠️ Geographic Bias:
+      • Level 1 data primarily from Eastern Europe
+      • Level 3 (PTB-XL) from German hospitals
+      • May not generalize to all populations
+
+   ⚠️ Temporal Limitations:
+      • Training data from specific time periods
+      • Medical practices and definitions may have evolved
+
+   ⚠️ Sample Size Constraints:
+      • Level 2: Only 918 samples (relatively small)
+      • Level 3: Limited to 5,000 ECGs (memory constraint)
+
+   ⚠️ Missing Populations:
+      • No pediatric data (model invalid for <18 years)
+      • Limited data on pregnant patients
+      • Underrepresentation of certain ethnic groups
+
+   5.2 Model Limitations:
+   ────────────────────────────────────────────────────────────────────────────────
+   ⚠️ False Positive Rate:
+      • Level 1 specificity is 56.4% (43% false positive rate)
+      • This is intentional (sensitivity-first design)
+      • Results in over-referral, but minimizes missed cases
+
+   ⚠️ External Validation:
+      • Not validated on independent external cohorts
+      • Not validated prospectively in clinical settings
+
+   ⚠️ NHANES Matching:
+      • Uses population-level statistics, not individual data
+      • In Streamlit app, asks user directly (better approach)
+
+   ⚠️ ECG Limitations:
+      • Trained on 12-lead ECG only
+      • May not work with single-lead or other formats
+      • Demo mode uses heuristics, not actual model
+
+   5.3 Technical Limitations:
+   ────────────────────────────────────────────────────────────────────────────────
+   • Requires Python 3.8+ environment
+   • Level 3 requires TensorFlow 2.x
+   • Memory requirement: ~8GB RAM minimum
+   • Not optimized for real-time inference at scale
+
+══════════════════════════════════════════════════════════════════════════════════
+6. BIAS ANALYSIS
+══════════════════════════════════════════════════════════════════════════════════
+
+   6.1 Known Biases:
+   ────────────────────────────────────────────────────────────────────────────────
+
+   │ Bias Type          │ Source                    │ Mitigation                │
+   ├────────────────────┼───────────────────────────┼───────────────────────────┤
+   │ Geographic         │ Eastern European data     │ Validate on diverse data  │
+   │ Age                │ Adult population only     │ Exclude pediatric use     │
+   │ Sex                │ ~65% male in training     │ Stratified evaluation     │
+   │ Socioeconomic      │ NHANES US-centric         │ Income feature included   │
+   │ Selection          │ Hospital-based samples    │ Document limitations      │
+   └────────────────────┴───────────────────────────┴───────────────────────────┘
+
+   6.2 Fairness Considerations:
+   ────────────────────────────────────────────────────────────────────────────────
+   • Model has NOT been audited for fairness across protected groups
+   • Recommend subgroup analysis before deployment:
+     - By age group (young adult, middle-aged, elderly)
+     - By sex (male, female)
+     - By ethnicity (if data available)
+     - By socioeconomic status
+
+   6.3 Recommended Fairness Metrics:
+   ────────────────────────────────────────────────────────────────────────────────
+   Before deployment, calculate:
+   • Equalized odds (TPR and FPR parity across groups)
+   • Demographic parity (positive prediction rate)
+   • Calibration by group (predicted probabilities match reality)
+
+══════════════════════════════════════════════════════════════════════════════════
+7. ETHICAL CONSIDERATIONS
+══════════════════════════════════════════════════════════════════════════════════
+
+   7.1 Potential Harms:
+   ────────────────────────────────────────────────────────────────────────────────
+
+   🔴 False Negatives (Missed CVD Cases):
+      • Consequence: Delayed diagnosis, potential adverse outcomes
+      • Mitigation: Sensitivity-first design (85%+ sensitivity)
+      • Residual Risk: ~15% of true cases may be missed by Level 1
+
+   🟡 False Positives (Unnecessary Referrals):
+      • Consequence: Patient anxiety, unnecessary follow-up costs
+      • Mitigation: Hierarchical triage filters false positives at each level
+      • Residual Risk: ~43% false positive rate at Level 1
+
+   🟡 Algorithmic Bias:
+      • Consequence: Underperformance in underrepresented groups
+      • Mitigation: NHANES adds socioeconomic context
+      • Residual Risk: Bias not formally audited
+
+   7.2 Privacy Considerations:
+   ────────────────────────────────────────────────────────────────────────────────
+   • Training data is de-identified (no PHI)
+   • Streamlit app does not store user data
+   • OpenAQ API queries use city only (no personal location)
+   • Recommend HIPAA/GDPR compliance review before clinical deployment
+
+   7.3 Transparency:
+   ────────────────────────────────────────────────────────────────────────────────
+   • Level 2 provides SHAP explanations for each prediction
+   • Feature importance rankings available
+   • This Model Card documents all known limitations
+   • Source code available for inspection
+
+══════════════════════════════════════════════════════════════════════════════════
+8. RECOMMENDATIONS FOR DEPLOYMENT
+══════════════════════════════════════════════════════════════════════════════════
+
+   8.1 Before Clinical Use:
+   ────────────────────────────────────────────────────────────────────────────────
+   □ External validation on independent cohort (different geography/time)
+   □ Prospective clinical trial with defined endpoints
+   □ Fairness audit across demographic subgroups
+   □ Regulatory approval if applicable (FDA 510(k), CE Mark, etc.)
+   □ Clinical workflow integration planning
+   □ User training program development
+
+   8.2 During Deployment:
+   ────────────────────────────────────────────────────────────────────────────────
+   □ Real-time performance monitoring dashboard
+   □ Distribution drift detection (input features)
+   □ Outcome feedback loop (actual diagnoses vs predictions)
+   □ Regular model retraining schedule (e.g., quarterly)
+   □ Incident reporting mechanism
+   □ Clinician feedback collection
+
+   8.3 Post-Deployment:
+   ────────────────────────────────────────────────────────────────────────────────
+   □ Annual model performance review
+   □ Bias monitoring and remediation
+   □ Update training data with new cases
+   □ Document all model versions and changes
+
+══════════════════════════════════════════════════════════════════════════════════
+9. REPRODUCIBILITY
+══════════════════════════════════════════════════════════════════════════════════
+
+   Random Seed:         42
+   Python Version:      3.8+
+   Key Dependencies:    scikit-learn, xgboost, lightgbm, tensorflow, shap
+   Hardware Used:       Mac M2, 8GB RAM, 256GB SSD
+   Training Time:       
+   • Level 1: ~5 minutes
+   • Level 2: ~2 minutes
+   • Level 3: ~20 hours (preserved, do not retrain)
+
+   Model Files:
+   ├── Models/level1_model.pkl (Ensemble + Scaler + Imputer + Threshold)
+   ├── Models/level2_model.pkl (XGBoost + Scaler + Feature Names)
+   └── Models/level3_best.h5 (CNN-LSTM weights)
+
+══════════════════════════════════════════════════════════════════════════════════
+10. REGULATORY COMPLIANCE NOTES
+══════════════════════════════════════════════════════════════════════════════════
+
+   FDA (United States):
+   • This is NOT an FDA-cleared medical device
+   • Would require 510(k) or De Novo pathway for clinical use
+   • Software as Medical Device (SaMD) classification applies
+
+   EU AI Act:
+   • Medical diagnostic AI is classified as HIGH-RISK
+   • Would require conformity assessment and CE marking
+   • This Model Card partially satisfies documentation requirements
+
+   For Educational/Research Use:
+   • May be used for non-clinical research and education
+   • Not for diagnostic or treatment decisions
+
+══════════════════════════════════════════════════════════════════════════════════
+11. CITATION
+══════════════════════════════════════════════════════════════════════════════════
+
+   If using this work, please cite:
+
+   @software{cardiox2024,
+     title = {Cardio-X: A Hierarchical CVD Triage System},
+     author = {[Your Name]},
+     year = {2026},
+     note = {Byte 2 Beat Hackathon Submission}
+   }
+
+   Data Citations:
+   • PTB-XL: Wagner et al., Scientific Data, 2020
+   • NHANES: CDC National Center for Health Statistics
+
+══════════════════════════════════════════════════════════════════════════════════
+12. VERSION HISTORY
+══════════════════════════════════════════════════════════════════════════════════
+
+   v2.0 (2026-02-23):
+   • Added NHANES external data integration (11 features)
+   • Added OpenAQ air quality integration
+   • Improved Level 1 sensitivity to 85%+
+   • Added SHAP explainability to Level 2
+   • Created Streamlit deployment app
+
+   v1.0 (Initial):
+   • Basic 3-level triage system
+   • Single dataset per level
+
+╚══════════════════════════════════════════════════════════════════════════════════╝

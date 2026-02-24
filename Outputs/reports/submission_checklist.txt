@@ -1,0 +1,36 @@
+
+CARDIO-X 2.0 SUBMISSION CHECKLIST
+Generated: 2026-02-23 12:56:07
+Status: 14/14 Complete (100%)
+
+MODELS:
+  [✅] level1_model.pkl
+  [✅] level2_model.pkl
+  [✅] level3_best.h5
+
+APP:
+  [✅] cardio_x_app.py
+
+NOTEBOOK:
+  [✅] new_hackathon.ipynb
+
+REPORTS:
+  [✅] final_submission_report.txt
+  [✅] MODEL_CARD.txt
+  [✅] level1_summary.txt
+  [✅] level2_summary.txt
+
+VISUALIZATIONS:
+  [✅] level1_results.png
+  [✅] level1_cv_results.png
+  [✅] level2_shap_summary.png
+  [✅] triage_system.png
+  [✅] cost_comparison.png
+
+HACKATHON CRITERIA:
+  [✅] Creativity - External data (NHANES + AQI)
+  [✅] Practicality - $0 village screening
+  [✅] Presentation - 3-level triage narrative
+  [✅] Technical - Ensemble + CNN-LSTM + SHAP
+
+DEADLINE: February 14, 2026, 5:00 PM EST

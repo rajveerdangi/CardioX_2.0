@@ -1,0 +1,233 @@
+2026-02-04 13:47:29,220 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:29,220 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:30,855 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-04 13:47:30,857 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-04 13:47:35,407 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-04 13:47:53,066 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:53,067 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:53,347 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:53,347 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:54,150 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:54,150 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:54,314 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:54,314 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:55,970 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:55,970 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:56,161 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:56,161 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:56,623 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:56,623 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:56,809 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:56,809 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:57,658 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:57,659 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:47:57,858 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:47:57,858 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:48:00,122 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:48:00,122 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:48:00,924 - CardioX - INFO - AQI Fetch completed in 0.798s
+2026-02-04 13:48:22,264 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:48:22,264 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:48:26,238 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:48:26,239 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:51:36,224 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:51:36,226 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:51:36,240 - CardioX - INFO - AQI Fetch completed in 0.004s
+2026-02-04 13:51:52,108 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:51:52,109 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:51:53,057 - CardioX - INFO - AQI Fetch completed in 0.940s
+2026-02-04 13:53:13,726 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:53:13,726 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:53:15,472 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:53:15,472 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-04 13:53:42,011 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-04 13:53:42,012 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:40:59,786 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:40:59,789 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:41:07,703 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:41:07,704 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:45:10,315 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:45:10,315 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:45:24,200 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:45:24,200 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:45:25,168 - CardioX - INFO - AQI Fetch completed in 0.961s
+2026-02-05 00:46:38,568 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:46:38,569 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:46:38,579 - CardioX - INFO - AQI Fetch completed in 0.002s
+2026-02-05 00:46:39,101 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:46:39,101 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-05 00:46:39,108 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-05 00:50:17,296 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-05 00:50:17,297 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 12:58:54,236 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 12:58:54,236 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 12:58:55,755 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 12:58:55,757 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 12:59:02,159 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 12:59:15,978 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 12:59:15,978 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 12:59:18,007 - CardioX - INFO - AQI Fetch completed in 2.005s
+2026-02-23 13:05:11,272 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:05:11,273 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:05:13,471 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 13:05:13,473 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 13:05:21,914 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 13:05:41,136 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:05:41,137 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:05:46,075 - CardioX - INFO - AQI Fetch completed in 4.899s
+2026-02-23 13:05:58,956 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:05:58,957 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:21:57,654 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:21:57,654 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:21:59,597 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 13:21:59,598 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 13:22:06,574 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 13:22:21,094 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:22:21,094 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:22:23,327 - CardioX - INFO - AQI Fetch completed in 2.220s
+2026-02-23 13:22:54,167 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:22:54,168 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:22:56,591 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:22:56,591 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:22:56,771 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:22:56,771 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:06,431 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:06,431 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:06,797 - CardioX - INFO - Level 2 Prediction completed in 0.351s
+2026-02-23 13:23:37,057 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:37,058 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:37,284 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:37,284 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:39,073 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:39,073 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:39,398 - CardioX - INFO - Level 2 Prediction completed in 0.311s
+2026-02-23 13:23:44,013 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:44,013 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:49,863 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:49,863 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:55,607 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:55,608 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:23:55,749 - CardioX - INFO - ECG Loading completed in 0.010s
+2026-02-23 13:23:59,905 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:23:59,905 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:24:00,045 - CardioX - INFO - ECG Loading completed in 0.005s
+2026-02-23 13:24:00,762 - CardioX - INFO - ECG Analysis completed in 0.508s
+2026-02-23 13:24:43,218 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:24:43,219 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:24:47,470 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:24:47,471 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:24:54,179 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:24:54,179 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:24:54,309 - CardioX - INFO - ECG Loading completed in 0.005s
+2026-02-23 13:24:57,089 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:24:57,090 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:24:57,229 - CardioX - INFO - ECG Loading completed in 0.005s
+2026-02-23 13:24:57,949 - CardioX - INFO - ECG Analysis completed in 0.509s
+2026-02-23 13:25:14,664 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:25:14,664 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:52:07,715 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:52:07,715 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 13:52:09,225 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 13:52:09,227 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 13:52:15,502 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 13:53:11,806 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 13:53:11,808 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:16:01,204 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:16:01,205 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:20:55,308 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:20:55,309 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:20:59,404 - CardioX - INFO - AQI Fetch completed in 4.076s
+2026-02-23 14:21:06,604 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:21:06,605 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:21:06,617 - CardioX - INFO - AQI Fetch completed in 0.005s
+2026-02-23 14:21:08,897 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:21:08,897 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:21:08,900 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 14:22:20,906 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:22:20,907 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:29:39,119 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:29:39,120 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:29:41,049 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 14:29:41,051 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 14:29:47,578 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 14:30:17,475 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:17,476 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:30:18,797 - CardioX - INFO - AQI Fetch completed in 1.281s
+2026-02-23 14:30:39,828 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:39,828 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:30:49,583 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:49,585 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:30:50,014 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:50,014 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:30:50,794 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:50,794 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:30:51,021 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:30:51,021 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:55:29,777 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:55:29,778 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 14:55:30,597 - CardioX - INFO - AQI Fetch completed in 0.809s
+2026-02-23 14:55:31,235 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 14:55:31,235 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:10:31,819 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:10:31,820 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:10:34,103 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 18:10:34,105 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 18:10:41,430 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 18:10:57,980 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:10:57,981 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:10:59,230 - CardioX - INFO - AQI Fetch completed in 1.216s
+2026-02-23 18:11:09,374 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:09,375 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:09,383 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:11,485 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:11,485 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:11,493 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:13,540 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:13,540 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:13,549 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:14,801 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:14,802 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:14,810 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:19,048 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:19,048 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:19,060 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:21,081 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:21,081 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:21,088 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:22,607 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:22,607 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:22,614 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:27,247 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:27,248 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:27,252 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:29,905 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:29,905 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:29,913 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:31,375 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:11:31,375 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:11:31,384 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:11:31,790 - CardioX - INFO - Level 1 Prediction completed in 0.393s
+2026-02-23 18:12:03,485 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:12:03,485 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:12:03,495 - CardioX - INFO - AQI Fetch completed in 0.000s
+2026-02-23 18:12:07,806 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:12:07,806 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:12:16,706 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:12:16,706 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:12:26,738 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:12:26,739 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:26:33,948 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:26:33,949 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:26:35,406 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 18:26:35,408 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 18:26:41,695 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 18:31:22,109 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:31:22,109 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:31:23,688 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 18:31:23,690 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 18:31:29,912 - CardioX - INFO - Level 3 model loaded successfully
+2026-02-23 18:35:16,534 - CardioX - INFO - WAQI token loaded: e639a7b9...c1f0
+2026-02-23 18:35:16,535 - CardioX - INFO - OpenCage key loaded: 52f034f2...86d2
+2026-02-23 18:35:18,033 - CardioX - INFO - Level 1 model loaded successfully
+2026-02-23 18:35:18,036 - CardioX - INFO - Level 2 model loaded successfully
+2026-02-23 18:35:24,095 - CardioX - INFO - Level 3 model loaded successfully

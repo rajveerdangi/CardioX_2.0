@@ -1,0 +1,48 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                      🏆 CARDIO-X 2.0 SUMMARY CARD 🏆                         ║
+║                Hierarchical CVD Triage System (Grade A+)                     ║
+║                                                                              ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🏥 LEVEL 1: VILLAGE SCREENING                                               ║
+║     Model:       Stacked Ensemble (XGB + RF + LGBM + GBC → LogReg)          ║
+║     Features:    35 (incl. NHANES + WAQI)                          ║
+║     Performance: Sens=85.2% | Spec=56.4% | AUC=0.8071                    ║
+║     Cost:        $0 (basic measurements only)                                ║
+║     External:    NHANES (11 features) + WAQI Air Quality (PM2.5)            ║
+║                                                                              ║
+║  🔬 LEVEL 2: CLINICAL DIAGNOSIS                                              ║
+║     Model:       XGBoost + SHAP Explainability                              ║
+║     Features:    20 (clinical + engineered)                        ║
+║     Performance: Sens=85.3% | Spec=86.6% | AUC=0.9303                    ║
+║     Cost:        $50 (requires lab tests)                                    ║
+║     Unique:      SHAP waterfall plots for clinical interpretability         ║
+║                                                                              ║
+║  🫀 LEVEL 3: ECG DEEP LEARNING                                               ║
+║     Model:       CNN-LSTM Hybrid (20 hours training on Mac M2)              ║
+║     Data:        PTB-XL 12-Lead ECG @ 500Hz (21,837 records)                ║
+║     Performance: Sens=90.0% | Spec=88.0% | AUC=0.9247                    ║
+║     Cost:        $200 (specialist interpretation)                            ║
+║                                                                              ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  🌟 INNOVATIONS (What makes Cardio-X unique):                                ║
+║     1. External Data: NHANES (CDC) + WAQI (Real-time Air Quality)           ║
+║     2. Explainable AI: SHAP waterfall plots for clinical trust              ║
+║     3. Cost Reduction: ~87% savings vs traditional approach                  ║
+║     4. Sensitivity-First: Optimized to NOT miss CVD cases                    ║
+║     5. Hierarchical Design: Village → Clinic → Hospital pathway             ║
+║                                                                              ║
+║  📊 DATA SOURCES (All de-identified & ethically sourced):                    ║
+║     • cardio_base.csv (Hack4Health) - 70,000 samples                        ║
+║     • PTB-XL (PhysioNet) - 21,837 ECG records                               ║
+║     • NHANES (CDC) - 9,254 population health records                        ║
+║     • WAQI API - Real-time air quality data                                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+Generated: 2026-02-23T12:55:59.509473
+Version: 3.1

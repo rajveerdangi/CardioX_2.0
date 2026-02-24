@@ -1,0 +1,51 @@
+2026-02-23 12:29:33,863 - INFO - Cardio-X session started
+2026-02-23 12:29:33,871 - INFO - Geocoding with OpenCage: Sehore
+2026-02-23 12:29:37,065 - INFO - OpenCage geocoded: Sehore → Sehore, Madhya Pradesh, India (3.20s)
+2026-02-23 12:29:37,067 - INFO - Geocoding with OpenCage: Bhopal
+2026-02-23 12:29:39,433 - INFO - OpenCage geocoded: Bhopal → Bhopal, Madhya Pradesh, India (2.37s)
+2026-02-23 12:29:39,435 - INFO - Geocoding with OpenCage: Delhi
+2026-02-23 12:29:42,063 - INFO - OpenCage geocoded: Delhi → New Delhi, Unknown, India (2.63s)
+2026-02-23 12:29:42,067 - INFO - Searching WAQI for: Bhopal
+2026-02-23 12:29:44,852 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:29:47,270 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (5.20s)
+2026-02-23 12:29:47,278 - INFO - Searching WAQI for: Delhi
+2026-02-23 12:29:49,828 - INFO - Found station: Shadipur, Delhi, Delhi, India (UID: 8179)
+2026-02-23 12:29:52,188 - INFO - WAQI fetch successful: AQI=206, PM2.5=206 (4.91s)
+2026-02-23 12:29:52,199 - INFO - Geocoding with OpenCage: Sehore
+2026-02-23 12:29:54,776 - INFO - OpenCage geocoded: Sehore → Sehore, Madhya Pradesh, India (2.58s)
+2026-02-23 12:29:54,778 - INFO - Searching WAQI for: Sehore
+2026-02-23 12:29:57,506 - WARNING - No WAQI stations found for: Sehore
+2026-02-23 12:29:57,508 - INFO - Trying fallback city: bhopal
+2026-02-23 12:30:00,291 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:30:04,033 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (9.25s)
+2026-02-23 12:39:27,710 - INFO - Cardio-X session started
+2026-02-23 12:39:27,714 - INFO - Geocoding with OpenCage: Sehore
+2026-02-23 12:39:33,141 - INFO - OpenCage geocoded: Sehore → Sehore, Madhya Pradesh, India (5.43s)
+2026-02-23 12:39:33,147 - INFO - Geocoding with OpenCage: Bhopal
+2026-02-23 12:39:37,298 - INFO - OpenCage geocoded: Bhopal → Bhopal, Madhya Pradesh, India (4.15s)
+2026-02-23 12:39:37,305 - INFO - Geocoding with OpenCage: Delhi
+2026-02-23 12:39:41,268 - INFO - OpenCage geocoded: Delhi → New Delhi, Unknown, India (3.96s)
+2026-02-23 12:39:41,274 - INFO - Searching WAQI for: Bhopal
+2026-02-23 12:39:45,314 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:39:49,381 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (8.11s)
+2026-02-23 12:39:49,388 - INFO - Searching WAQI for: Delhi
+2026-02-23 12:39:53,513 - INFO - Found station: Shadipur, Delhi, Delhi, India (UID: 8179)
+2026-02-23 12:39:57,633 - INFO - WAQI fetch successful: AQI=206, PM2.5=206 (8.24s)
+2026-02-23 12:39:57,639 - INFO - Geocoding with OpenCage: Sehore
+2026-02-23 12:40:01,330 - INFO - OpenCage geocoded: Sehore → Sehore, Madhya Pradesh, India (3.69s)
+2026-02-23 12:40:01,333 - INFO - Searching WAQI for: Sehore
+2026-02-23 12:40:05,579 - WARNING - No WAQI stations found for: Sehore
+2026-02-23 12:40:05,580 - INFO - Trying fallback city: bhopal
+2026-02-23 12:40:10,253 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:40:14,574 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (13.24s)
+2026-02-23 12:45:53,061 - INFO - Searching WAQI for: Sehore
+2026-02-23 12:45:57,827 - WARNING - No WAQI stations found for: Sehore
+2026-02-23 12:45:57,832 - INFO - Trying fallback city: bhopal
+2026-02-23 12:46:02,292 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:46:06,778 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (13.72s)
+2026-02-23 12:46:06,791 - INFO - Searching WAQI for: Bhopal
+2026-02-23 12:46:11,050 - INFO - Found station: Paryavaran Parisar, Bhopal, India (UID: 14695)
+2026-02-23 12:46:15,337 - INFO - WAQI fetch successful: AQI=151, PM2.5=151 (8.55s)
+2026-02-23 12:46:15,347 - INFO - Searching WAQI for: Delhi
+2026-02-23 12:46:19,789 - INFO - Found station: Shadipur, Delhi, Delhi, India (UID: 8179)
+2026-02-23 12:46:24,125 - INFO - WAQI fetch successful: AQI=206, PM2.5=206 (8.78s)

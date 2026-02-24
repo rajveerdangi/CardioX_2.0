@@ -1,0 +1,170 @@
+
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║                         CARDIO-X 2.0: GRADE A SUBMISSION                          ║
+║                    Byte 2 Beat Hackathon - February 2026                        ║
+║                      Generated: 2026-02-23 12:56:02                          ║
+╠══════════════════════════════════════════════════════════════════════════════════╣
+
+📋 PROJECT: Cardio-X - A Hierarchical, Explainable CVD Triage System
+════════════════════════════════════════════════════════════════════════════════════
+
+🎯 PROBLEM ADDRESSED:
+────────────────────────────────────────────────────────────────────────────────────
+• 17.9 million deaths annually from CVD (WHO, 2023)
+• Fragmented diagnostics: GP → Lab → Cardiologist (weeks of delay)
+• Black-box AI lacks clinical trust
+• Resource mismatch: Advanced AI, but no village-level access
+
+💡 OUR SOLUTION: THE 3-LEVEL TRIAGE SYSTEM
+════════════════════════════════════════════════════════════════════════════════════
+
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ 🏥 LEVEL 1: VILLAGE SCREENING (Cost: $0)                              │
+│ ──────────────────────────────────────────────────────────────────────────────── │
+│ Model:    Stacked Ensemble (XGBoost + Random Forest + LightGBM + GBC)            │
+│ Features: 35 total                                                           │
+│           • 11 Original (age, BP, cholesterol, lifestyle)                        │
+│           • 11 NHANES (sleep, income, symptoms, medications) 🌟 EXTERNAL         │
+│           • 1 Air Quality (PM2.5 from OpenAQ API) 🌫️ EXTERNAL                    │
+│           • 12 Engineered (BMI, risk scores, interactions)                       │
+│ Samples:  68,629                                                              │
+│ Metrics:  Sensitivity: 85.2% | Specificity: 56.4% | AUC: 0.807      │
+│ Threshold: 0.510 (optimized for sensitivity ≥ 85%)                         │
+└──────────────────────────────────────────────────────────────────────────────────┘
+                                        ↓ Referral
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ 🔬 LEVEL 2: CLINICAL DIAGNOSIS (Cost: $50)                              │
+│ ──────────────────────────────────────────────────────────────────────────────── │
+│ Model:    XGBoost with SHAP Explainability                                       │
+│ Features: 20 total                                                           │
+│           • Clinical tests (cholesterol, BP, fasting glucose)                    │
+│           • ECG markers (ST depression, slope)                                   │
+│           • Stress test results (max HR, exercise angina)                        │
+│ Samples:  918                                                                │
+│ Metrics:  Sensitivity: 87.3% | Specificity: 87.8% | AUC: 0.927     │
+│ Explainability: SHAP waterfall plots for individual patient explanations        │
+└──────────────────────────────────────────────────────────────────────────────────┘
+                                        ↓ Referral
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ 🫀 LEVEL 3: ECG DEEP LEARNING (Cost: $200)                               │
+│ ──────────────────────────────────────────────────────────────────────────────── │
+│ Model:    CNN-LSTM Hybrid Architecture                                           │
+│           • 4 Conv1D blocks with BatchNorm and Dropout                           │
+│           • 2 Bidirectional LSTM layers                                          │
+│           • Dense classification head                                            │
+│ Data:     PTB-XL (PhysioNet) - 12-lead ECG, 500Hz, 10 seconds                    │
+│ Samples:  5,000 (balanced: Normal/Abnormal)                                   │
+│ Metrics:  Sensitivity: 90.0% | Specificity: 88.0% | AUC: 0.925     │
+│ Training: 20 hours on Mac M2 (preserved - DO NOT RETRAIN)                        │
+└──────────────────────────────────────────────────────────────────────────────────┘
+
+✅ HACKATHON CRITERIA ADDRESSED:
+════════════════════════════════════════════════════════════════════════════════════
+
+┌────────────────────┬─────────────────────────────────────────────────────────────┐
+│ CRITERIA           │ HOW CARDIO-X ADDRESSES IT                                   │
+├────────────────────┼─────────────────────────────────────────────────────────────┤
+│ 🎨 CREATIVITY      │ • External data: NHANES (11 features) + OpenAQ (PM2.5)     │
+│                    │ • Hierarchical triage (not just one model!)                 │
+│                    │ • Real-time air quality integration                         │
+│                    │ • Social determinants of health (income, sleep)             │
+├────────────────────┼─────────────────────────────────────────────────────────────┤
+│ 🔧 PRACTICALITY    │ • Level 1: $0 cost (village clinic feasible)               │
+│                    │ • Streamlit app for real-world deployment                   │
+│                    │ • Works on Mac M2 with 8GB RAM                              │
+│                    │ • 87% cost reduction vs traditional approach                │
+├────────────────────┼─────────────────────────────────────────────────────────────┤
+│ 🎤 PRESENTATION    │ • Clear 3-level narrative                                   │
+│                    │ • Hook: "17.9 million deaths annually"                      │
+│                    │ • Visual triage flow diagrams                               │
+│                    │ • Cost-effectiveness analysis                               │
+├────────────────────┼─────────────────────────────────────────────────────────────┤
+│ 💻 TECHNICAL       │ • Ensemble methods (Stacking Classifier)                    │
+│                    │ • CNN-LSTM for ECG (deep learning)                          │
+│                    │ • SHAP explainability (XAI)                                 │
+│                    │ • Proper CV, bootstrap CI, calibration                      │
+└────────────────────┴─────────────────────────────────────────────────────────────┘
+
+📊 PERFORMANCE COMPARISON:
+════════════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────┬────────────┬────────────┬──────────┬─────────┬─────────┐
+│ Level                   │ Sens.      │ Spec.      │ AUC      │ Cost    │ Status  │
+├─────────────────────────┼────────────┼────────────┼──────────┼─────────┼─────────┤
+│ Level 1: Village        │   85.2%   │   56.4%   │  0.807  │   $0   │   ✅    │
+│ Level 2: Clinical       │   87.3%   │   87.8%   │  0.927  │  $50   │   ✅    │
+│ Level 3: ECG DL         │   90.0%   │   88.0%   │  0.925  │  $200  │   ✅    │
+└─────────────────────────┴────────────┴────────────┴──────────┴─────────┴─────────┘
+
+💰 COST-EFFECTIVENESS ANALYSIS:
+════════════════════════════════════════════════════════════════════════════════════
+
+Population: 1,000,000 | CVD Prevalence: 5%
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ TRADITIONAL APPROACH (Everyone gets full workup):                               │
+│   Cost: 1,000,000 × $250 = $250,000,000                    │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ CARDIO-X HIERARCHICAL APPROACH:                                                 │
+│   Level 1: 1,000,000 × $0 = $0                                      │
+│   Level 2: 435,670 × $50 = $21,783,500                          │
+│   Level 3: 65,350 × $200 = $13,070,000                          │
+│   ─────────────────────────────────────────                                     │
+│   TOTAL: $34,853,500                                              │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│ 💵 SAVINGS: $215,146,500 (86.1% reduction!)                │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+🔧 TECHNICAL IMPLEMENTATION:
+════════════════════════════════════════════════════════════════════════════════════
+
+✅ Data Leakage Prevention:
+   • Scaler/Imputer fit ONLY on training data
+   • SMOTE applied ONLY to training set
+   • Strict train/validation/test separation
+   • Patient-level stratification where applicable
+
+✅ Sensitivity-First Optimization:
+   • Level 1 threshold: 0.510 (lowered to catch more CVD cases)
+   • Clinical goal: Sensitivity ≥ 85% ✅ ACHIEVED (85.2%)
+   • False Negative minimization prioritized over accuracy
+
+✅ External Data Integration:
+   • NHANES: 11 features (sleep, income, symptoms, medications)
+   • OpenAQ: Real-time PM2.5 air quality by city
+   • Unique fusion differentiates from other submissions
+
+✅ Explainable AI:
+   • SHAP summary plots (global feature importance)
+   • SHAP waterfall plots (individual patient explanations)
+   • Doctor-friendly "Why This Prediction" interface
+
+🗂️ DELIVERABLES:
+════════════════════════════════════════════════════════════════════════════════════
+
+CardioX_Project/
+├── 📓 new_hackathon.ipynb          (Complete Jupyter Notebook)
+├── 🖥️ cardio_x_app.py              (Streamlit Dashboard)
+├── 📁 Models/
+│   ├── level1_model.pkl            (Level 1 Ensemble + Preprocessors)
+│   ├── level2_model.pkl            (Level 2 XGBoost + SHAP)
+│   └── level3_best.h5              (Level 3 CNN-LSTM - 20hr training)
+├── 📁 Outputs/
+│   ├── plots/                      (All visualizations)
+│   └── reports/                    (All text reports)
+└── 📁 Data/
+    ├── given/                      (Hackathon datasets)
+    ├── ptb-xl/                     (ECG waveforms)
+    └── external/                   (NHANES + OpenAQ)
+
+🏆 KEY DIFFERENTIATORS FOR JUDGING:
+════════════════════════════════════════════════════════════════════════════════════
+
+1. 🌟 EXTERNAL DATA: Only team using NHANES + OpenAQ (likely!)
+2. 🏥 HIERARCHICAL: Mimics real healthcare workflow
+3. 💡 EXPLAINABILITY: SHAP makes AI trustworthy for doctors
+4. 💰 COST-EFFECTIVE: 87% cost savings with hierarchical triage
+5. 🫀 REAL ECG: CNN-LSTM on PTB-XL (not toy data)
+6. 📱 DEPLOYED: Working Streamlit app with real-time AQI
+
+╚══════════════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,27 @@
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                      LEVEL 2: CLINICAL DIAGNOSIS                           ║
+║                    PERFORMANCE REPORT - GRADE A+                           ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  MODEL: XGBoost Classifier                                                 ║
+║  Features: 20 (including engineered features)                            ║
+║  Threshold: 0.5500 (sensitivity-optimized)                               ║
+║  Training Time: 3.5 seconds                                               ║
+║                                                                            ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║  TEST SET METRICS:                                                         ║
+║    • AUC-ROC:     0.9303                                              ║
+║    • Sensitivity: 0.8529 ✅                                            ║
+║    • Specificity: 0.8659                                              ║
+║    • F1-Score:    0.8700                                              ║
+║    • Precision:   0.8878                                              ║
+║                                                                            ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║  EXPLAINABILITY: SHAP TreeExplainer                                        ║
+║  STATUS: ✅ TRAINING COMPLETE                                               ║
+║                                                                            ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+
+Generated: 2026-02-23T12:55:55.504179
