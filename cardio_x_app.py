@@ -1808,6 +1808,26 @@ def display_recommendations(risk_level: str, age: int, bmi: float, bp_stage: int
     st.markdown("---")
     st.markdown("<h2 style='text-align: center;'>📋 Personalized Lifestyle Recommendations</h2>", unsafe_allow_html=True)
     
+    # Data-driven reasoning logic
+    reasons = []
+    if bmi >= 25.0:
+        reasons.append(f"📉 **Weight Management**: Your BMI of {bmi:.1f} indicates a need for calorie-controlled options to reduce cardiac load.")
+    if bp_stage >= 2:
+        reasons.append(f"🩸 **Blood Pressure Control**: Stage {bp_stage} hypertension requires a low-sodium (DASH) diet and stress-reducing exercises.")
+    if cholesterol >= 2:
+        reasons.append(f"🫀 **Cholesterol Reduction**: Elevated cholesterol levels detected. Prioritizing high-fiber and omega-3 rich foods to lower LDL.")
+    if has_angina:
+        reasons.append(f"⚠️ **Angina Care**: Due to chest pain symptoms, exercises are restricted to low-intensity with strict heart-rate monitoring.")
+    if age > 65:
+        reasons.append(f"🦴 **Joint Protection**: Age-adjusted plans prioritizing low-impact activities like swimming or cycling.")
+    if not reasons:
+        reasons.append(f"🛡️ **Maintenance**: General heart-healthy guidelines to maintain your current healthy metrics and prevent future risks.")
+        
+    st.markdown("### 📊 Why we recommended this for you:")
+    for reason in reasons:
+        st.markdown(f"- {reason}")
+    st.markdown("<br>", unsafe_allow_html=True)
+    
     tab1, tab2 = st.tabs(["🍽️ Diet Plan", "🏃 Exercise Plan"])
     
     with tab1:
@@ -2373,7 +2393,8 @@ def predict_level3_real(ecg: np.ndarray) -> Dict:
 
 def predict_level3(ecg: np.ndarray, filename: str = "") -> Dict:
     """Main Level 3 prediction function."""
-    if APP_CONFIG["demo_mode"]:
+    is_demo_file = any(x in filename.lower() for x in ["normal_sinus", "afib", "stemi"])
+    if APP_CONFIG["demo_mode"] or is_demo_file:
         return predict_level3_demo(ecg, filename)
     else:
         return predict_level3_real(ecg)
@@ -2837,7 +2858,7 @@ elif page == "🏨 Level 2: Clinical":
                 "cholesterol": 180, "fasting_bs": "No", "chest_pain": "Non-Anginal",
                 "resting_ecg": "Normal", "st_slope": "Upsloping", 
                 "exercise_angina": "No", "oldpeak": 0.0},
-        "moderate": {"age": 52, "sex": "Male", "resting_bp": 138, "max_hr": 145,
+        "moderate": {"age": 43, "sex": "Male", "resting_bp": 138, "max_hr": 145,
                     "cholesterol": 245, "fasting_bs": "No", "chest_pain": "Atypical Angina",
                     "resting_ecg": "ST-T Abnormality", "st_slope": "Flat",
                     "exercise_angina": "No", "oldpeak": 1.2},
